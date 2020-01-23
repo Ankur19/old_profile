@@ -1,0 +1,29 @@
+.id-main-div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-image:linear-gradient(white,rgb(177, 192, 226));
+    height:100%;
+}
+
+#id-main-img img{
+    height:25vmax;
+    width:25vmax;
+    border-radius:50%;
+}
+#id-name-div{
+    margin-top:5vh;
+    margin-bottom:2vh;
+    font-size:8vh;
+    line-height:8vh;
+    color:rgba(0, 0, 0, 0.7);
+}
+
+#id-about-div p{
+    padding-left:2vw;
+    padding-right:2vw;
+    line-height:2.5vh;
+    font-size:2.5vh;
+    font-weight:400;
+    color:rgba(0, 0, 0, 0.5);
+}

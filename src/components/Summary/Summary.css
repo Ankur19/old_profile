@@ -1,0 +1,23 @@
+.summary-main-div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:100%;
+    background-image:linear-gradient(white,rgb(177, 192, 226));
+}
+.summary-title{
+    line-height:10vh;
+    font-size:7vh;
+    color:rgba(0, 0, 0, 0.8);
+    margin:20px;
+}
+.summary-content{
+    display:flex;
+    flex-direction:column;
+    align-content:space-between;
+    font-size: 17px;
+    line-height:27px;
+    padding-left:5vw;
+    padding-right:5vw;
+    text-align:left;
+}
