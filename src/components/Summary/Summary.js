@@ -1,11 +1,10 @@
 import React from "react";
 import "./Summary.css";
 
-let summaryContent = <p>I love coding and solving problems. Forever interested in computers and computer software. <br></br><br></br>Joined IBM as a software tester in 2016 and later moved on to become a software developer. Left IBM to further work on my computer science background and pursue a masters degree in computer science. <br></br><br></br>3 years of extensive experience working on a business critical application for AT&T/IBM. Developed and tested end to end sales workflows for products like AT&T-SDWAN. <br></br>Also have experience working on AGILE projects and projects implementing TDD. Won a IBM Eminence and Excellence award for my contributions to developing a automation testing framework among other things. <br></br><br></br>Strongly motivated to learn, implement new technologies and build software. I have found that building useful software excites me. <br></br><br></br>Oh, I also play the guitar and sometimes use my own software to find and play new chords.</p>;
+let summaryContent = <p><span className="big-italics">I love <br></br>coding <span className="red-text">&</span> <br></br>solving problems</span><br></br> <span className="title-text">I am a programmer</span> <br></br>Usually work with Javascript for front-end, either standalone or with frameworks like Reactjs. Comfortable using Bootstrap and jQuery in tandem with HTML/CSS for creating pretty UI.<br></br><br></br>Love using Javascript for the back-end as well (Node.js, Express.js, Electron.js). I have 1 year experience working as a Microservices Java Developer using Spring MVC and 2 years of experience working as a Software Tester - Automation tools. Have also used PHP at times. Strongly motivated to learn, implement new technologies and build software. I have found that building softwares that have a social impact excites me. <br></br><br></br>Oh, I also play the guitar and sometimes use my own software to find and play new chords.</p>;
 
 function Summary(props){
     return <div className='summary-main-div'>
-        <div className="summary-title">Summary</div>
         <div className="summary-content">{summaryContent}</div>
     </div>
 }

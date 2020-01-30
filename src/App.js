@@ -6,6 +6,7 @@ const menuItems = ["ABOUT", "EDUCATION", "EXPERIENCE", "PROJECTS", "HOBBIES"];
 function App() {
 
   const[menuState, setMenuState] = useState(0);
+  const[currentMenuItem, setMenuItem] = useState(0);
   let overlappingBoxes = [];
   if(menuState===1){
     overlappingBoxes.push(<div key={1} id="overlapping-box-2"></div>);
@@ -14,11 +15,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Menu menuItems={menuItems} menuState={menuState} setMenuState={setMenuState}></Menu>
+        <Menu menuItems={menuItems} menuState={menuState} setMenuState={setMenuState} menuItem={currentMenuItem} setMenuItem={setMenuItem}></Menu>
       </header>
       <main>
         {overlappingBoxes.length>0 ? <div id="overlapping-boxes-div">{overlappingBoxes}</div> : null}
-        <Body menuState={menuState}></Body>
+        <Body menuState={menuState} menuItem={currentMenuItem}></Body>
       </main>
     </div>
   );

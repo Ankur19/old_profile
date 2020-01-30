@@ -1,0 +1,112 @@
+#leftselector-main-div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:100%;
+    background-image:linear-gradient( rgba(255, 255, 255, 0.99), rgba(35, 95, 223, 0.658));
+}
+.leftselector-selector-div{
+    align-self:flex-end;
+    height:4vw;
+    line-height:4vw;
+    font-size:1vw;
+    font-weight:500;
+    color:rgba(31, 29, 29, 0.7);
+    width:23vw;
+    border-top-left-radius:2vh;
+    border-bottom-left-radius:2vh;
+    background-color:rgba(255, 255, 0, 0.2);
+    transition:all ease-out 150ms;
+    border:1px solid rgba(255, 255, 255, 0.349);
+}
+.leftselector-selected{
+    line-height:5vw;
+    height:5vw;
+    font-size:2vw;
+    width:30vw;
+    background-color:rgba(0, 47, 255, 0.6);
+    color:rgba(31, 29, 29, 0.8);
+}
+.leftselector-selector-div:hover{
+    line-height:5vw;
+    height:5vw;
+    font-size:2vw;
+    width:30vw;
+    background-color:rgba(0, 47, 255, 0.6);
+    color:rgba(31, 29, 29, 0.8);
+}
+.leftselector-options{
+    display:flex;
+    flex-direction:row;
+    position:absolute;
+    top:23vh;
+    left:1vw;
+    animation:enterin 3s ease 0s 1 normal forwards;
+}
+.separator-1{
+    width:1.8vw;
+    height:15vh;
+    margin-bottom:3vh;
+    background-color:rgba(0, 0, 0, 0.7);
+    position:absolute;
+    top:0vh;
+    left:25vw;
+    animation: slidein4 2s ease 0s 1 normal backwards;
+}
+.separator-2{
+    height:1.8vw;
+    width:34.8vw;
+    background-color:rgba(0, 0, 0, 0.7);
+    position:absolute;
+    left:0vh;
+    top:16vh;
+    animation: slidein 1s ease 0s 1 normal forwards;
+}
+
+.separator-3{
+    height:1.8vw;
+    width:34.8vw;
+    background-color:rgba(255, 255, 255, 0.7);
+    position:absolute;
+    top:55vh;
+    left:14vw;
+    animation: slidein3 2s ease 0s 1 normal forwards;
+}
+.separator-4{
+    width:1.8vw;
+    height:40vh;
+    background-color:rgba(0, 0, 0, 0.7);
+    position:absolute;
+    bottom:-1.5vh;
+    left:14vw;
+    animation:slidein2 1s ease 0s 1 normal forwards;
+}
+
+
+@keyframes slidein {
+    from { width:0; }
+    to   { width:34.8vw;}
+  }
+
+@keyframes slidein2{
+    from { height:0;}
+    to   { height:40vh;}
+}
+
+@keyframes slidein3 {
+    0% { width:0;}
+    50% {width:0;margin-left:48.8vw;}
+    100% { width:34.8vw; margin-left:0;}
+}
+
+@keyframes slidein4{
+    0% { height:0;}
+    48% { margin-top:15vh;height:0;}
+    100% { margin-top:0vh;height:15vh;}
+}
+
+@keyframes enterin {
+    0% { width:0;overflow:hidden;}
+    50% { width:0;overflow:hidden;}
+    100% { width:50vw}
+}

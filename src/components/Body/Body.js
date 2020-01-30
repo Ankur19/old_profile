@@ -2,6 +2,8 @@ import React from "react";
 import "./Body.css";
 import ID from "../ID/ID";
 import Summary from "../Summary/Summary";
+import LeftSelector from "../LeftSelector/LeftSelector";
+import RightDetails from "../RightDetails/RightDetails";
 
 function Body(props){
 
@@ -13,10 +15,10 @@ function Body(props){
 
     return <div className={bodyMainClass}>
         <div className="body-left">
-            <ID></ID>
+            {props.menuItem===0?<ID></ID>:<LeftSelector></LeftSelector>}
         </div>
         <div className="body-right">
-            <Summary></Summary>
+        {props.menuItem===0?<Summary></Summary>:<RightDetails></RightDetails>}
         </div>
     </div>
 }

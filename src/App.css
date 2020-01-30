@@ -7,6 +7,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+main{
+  text-align:center;
+}
 #overlapping-boxes-div{
   width:100%;
   height:4vh;

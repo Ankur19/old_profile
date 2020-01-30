@@ -8,12 +8,14 @@ function Menu(props){
         if(props.menuState===0){
             [...document.getElementsByClassName('menu-items-div')].forEach(elem=>elem.style.display = "flex");
             document.getElementsByClassName('menu-img')[0].src = process.env.PUBLIC_URL + "/close.png";
-            document.getElementsByClassName('menu-main-div')[0].style.backgroundColor = '#EBECF0';
+            //document.getElementsByClassName('menu-main-div')[0].style.backgroundColor = '#EBECF0';
+            document.getElementsByClassName('menu-main-div')[0].style.backgroundImage = "linear-gradient(rgb(177, 192, 226), white)";
             props.setMenuState(1);
         }
         else{
             [...document.getElementsByClassName('menu-items-div')].forEach(elem=>elem.style.display = "none");
             document.getElementsByClassName('menu-img')[0].src = process.env.PUBLIC_URL + "/menu.png";
+            document.getElementsByClassName('menu-main-div')[0].style.backgroundImage = "none";
             document.getElementsByClassName('menu-main-div')[0].style.backgroundColor = '#FFFFFF';
             props.setMenuState(0);
         }
@@ -23,10 +25,10 @@ function Menu(props){
     if(props.menuItems !==undefined){
         props.menuItems.forEach((item, index)=>{
             if(index%maxIntemsPerRow===0){
-                menuItems.push([<div key={index} className="menu-menuitem-div"><p className="menu-menuitem-p">{item}</p></div>])
+                menuItems.push([<div key={index} className="menu-menuitem-div" onClick={()=>{props.setMenuItem(index);menuActivateHandler();}}><p className="menu-menuitem-p">{item}</p></div>])
             }
             else{
-                menuItems[menuItems.length-1].push(<div key={index} className="menu-menuitem-div"><p className="menu-menuitem-p">{item}</p></div>);
+                menuItems[menuItems.length-1].push(<div key={index} className="menu-menuitem-div" onClick={()=>{props.setMenuItem(index);menuActivateHandler();}}><p className="menu-menuitem-p">{item}</p></div>);
             }
         });
     }
@@ -51,8 +53,11 @@ function Menu(props){
 
 
     return <div className="menu-main-div">
-            <div className="menu-img-div" onClick={menuActivateHandler}>
-                <img className="menu-img" src={process.env.PUBLIC_URL + "/menu.png"} alt="menu"></img>
+            <div className="menu-top-div">
+                <div className="menu-main-name">ankur<span>saikia</span></div>
+                <div className="menu-img-div" onClick={menuActivateHandler}>
+                    <img className="menu-img" src={process.env.PUBLIC_URL + "/menu.png"} alt="menu"></img>
+                </div>
             </div>
             {menuRows}
         </div>
