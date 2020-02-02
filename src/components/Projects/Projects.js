@@ -14,10 +14,10 @@ const projects = [<p><span className="projects-heading">Chords Maker</span><br><
 <p><span className="projects-heading">PATH FINDER</span><br></br><span className="projects-desc">An algorithm visualizer to visualize how common path finding algorithms calculate the shortest path from source to destination.</span><br></br><span className="projects-footer">JavaScript, jQuery, Bootstrap, HTML, CSS</span><br></br></p>,
 <p><span className="projects-heading">ELECTRONIC VENDOR</span><br></br><span className="projects-desc">A vendor website to sell electronic products with all the functionality of a modern webstore like sub-category wise filtering and search.</span><br></br><span className="projects-footer">PHP, JavaScript, Oracle SQL, jQuery, Bootstrap</span><br></br></p>];
 
-const projResources = [<div style={{display:"flex",flexDirection:"row"}}><a className="projects-download"href={chordsAppLink} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "./downloading-file.png"} alt="download"></img>Download</a><a className="projects-github" href={chordsMakerGit} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "./github-logo.png"} alt="github"></img>Source</a></div>,
-<div style={{display:"flex",flexDirection:"row"}}><a className="projects-download"href={atripSite} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "./www.png"} alt="download"></img>Visit Page</a></div>,
-<div style={{display:"flex",flexDirection:"row"}}><a className="projects-download"href={pathFinderSite} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "./www.png"} alt="download"></img>Visit</a><a className="projects-github" href={pathFinderGit} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "./github-logo.png"} alt="github"></img>Source</a></div>,
-<div style={{display:"flex",flexDirection:"row"}}><a className="projects-github" href={electronicVendorGit} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "./github-logo.png"} alt="github"></img>Source</a></div>]
+const projResources = [<div style={{display:"flex",flexDirection:"row"}}><a className="projects-download"href={chordsAppLink} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "/downloading-file.png"} alt="download"></img>Download</a><a className="projects-github" href={chordsMakerGit} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "/github-logo.png"} alt="github"></img>Source</a></div>,
+<div style={{display:"flex",flexDirection:"row"}}><a className="projects-download"href={atripSite} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "/www.png"} alt="download"></img>Visit Page</a></div>,
+<div style={{display:"flex",flexDirection:"row"}}><a className="projects-download"href={pathFinderSite} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "/www.png"} alt="download"></img>Visit</a><a className="projects-github" href={pathFinderGit} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "/github-logo.png"} alt="github"></img>Source</a></div>,
+<div style={{display:"flex",flexDirection:"row"}}><a className="projects-github" href={electronicVendorGit} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL + "/github-logo.png"} alt="github"></img>Source</a></div>]
 
 function getNavs(count, curProject, setProject){
     let navs = [];
@@ -37,7 +37,7 @@ function getNavs(count, curProject, setProject){
 function Projects(props){
 
     const [curProject, setProject] = useState(0);
-    
+
     useEffect(()=>{
         let changeProject = setInterval(()=>{
             if(curProject===numProjects-1){
