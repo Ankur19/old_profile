@@ -7,6 +7,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+header{
+  height:10vh;
+}
 main{
   text-align:center;
 }

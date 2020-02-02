@@ -6,6 +6,35 @@
     height:100%;
     background-image:linear-gradient(white,rgb(177, 192, 226));
 }
+.summary-goto-projects{
+    margin-left:auto;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-right:2vw;
+    padding:5px;
+    border-radius:10px;
+    background-color:rgba(177, 192, 226, 0.5);
+    color:rgba(0, 0, 0, 0.6);
+}
+.summary-goto-projects:hover{
+    cursor: pointer;
+    background-color: rgba(177, 192, 226, 0.7);
+}
+.summary-goto-projects img{
+    height:24px;
+    width:24px;
+    margin-left:5px;
+}
+.summary-goto-projects p{
+    font-size:20px;
+    line-height:24px;
+    padding:0px;
+    margin:0px;
+    padding-right:5px;
+    border-right:1px solid rgba(135, 207, 235, 0.4);
+}
+
 
 .summary-content{
     display:flex;

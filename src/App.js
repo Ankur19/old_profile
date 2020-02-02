@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Menu from "./components/Menu/Menu";
 import Body from "./components/Body/Body";
+//Donot ever change the index for the array
 const menuItems = ["ABOUT", "EDUCATION", "EXPERIENCE", "PROJECTS", "HOBBIES"];
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
       </header>
       <main>
         {overlappingBoxes.length>0 ? <div id="overlapping-boxes-div">{overlappingBoxes}</div> : null}
-        <Body menuState={menuState} menuItem={currentMenuItem}></Body>
+        <Body menuState={menuState} menuItem={currentMenuItem} setMenuItem={setMenuItem}></Body>
       </main>
     </div>
   );

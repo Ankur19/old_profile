@@ -6,8 +6,10 @@
     padding:0px;
     margin:0px;
     min-height:90vh;
+    background-size: cover;
     transition:all 100ms ease-in-out;
 }
+
 .body-main-menu-on{
     width:80%;
     position:fixed;
