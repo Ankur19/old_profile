@@ -5,7 +5,7 @@ let summaryContent = <p><span className="big-italics">I love <br></br>coding <sp
 
 function Summary(props){
     return <div className='summary-main-div'>
-        <div className = "summary-goto-projects" onClick={()=>props.setMenuItem(3)}><p>Check<br></br>my<br></br>Projects</p><img src={process.env.PUBLIC_URL + "./arrow.png"}alt="goto-projects"></img></div>
+        <div className = "summary-goto-projects" onClick={()=>props.setMenuItem(3)}><p>Check<br></br>my<br></br>Projects</p><img src={process.env.PUBLIC_URL + "./11.png"}alt="goto-projects"></img></div>
         <div className="summary-content">{summaryContent}</div>
     </div>
 }
